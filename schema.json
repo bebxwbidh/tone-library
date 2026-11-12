@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "lvpai 影调档案 schema V1",
+  "description": "A方案：从用户提供的真实婚纱摄影成片（1–5张）提取的影调风格档案。禁止伪造无法从成片反推的相机参数/白平衡K值/调色曲线。",
+  "type": "object",
+  "required": ["tone_id", "name", "version", "created", "source", "tone", "prompt_fragments"],
+  "additionalProperties": false,
+  "properties": {
+    "tone_id": {
+      "type": "string",
+      "pattern": "^tone-[0-9]{8}-[0-9]{2,3}$",
+      "description": "全局唯一。格式 tone-YYYYMMDD-序号，序号为当日递增。写入后不可复用给其他档案。"
+    },
+    "name": { "type": "string", "maxLength": 20, "description": "人类可读名称，如「黄昏暖金胶片调」" },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+$", "description": "档案修订版本；修订时递增并更新 updated" },
+    "created": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "updated": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "source": {
+      "type": "object",
+      "required": ["type", "photos"],
+      "properties": {
+        "type": { "type": "string", "const": "user_reference_photos", "description": "V1 只支持用户提供成片这一种来源" },
+        "photos": {
+          "type": "array", "minItems": 1, "maxItems": 5,
+          "items": { "type": "string" },
+          "description": "参考照片路径或可追溯描述；档案建立后照片可被清理，此处记录是唯一出处"
+        },
+        "note": { "type": "string" }
+      }
+    },
+    "tone": {
+      "type": "object",
+      "required": ["warm_cool", "contrast", "highlights_shadows", "saturation", "skin_environment", "texture", "suitable", "unsuitable", "banned_anomalies"],
+      "properties": {
+        "warm_cool": {
+          "type": "object", "required": ["value"],
+          "properties": {
+            "value": { "type": "string", "enum": ["偏冷", "中性", "偏暖", "暖中带冷", "冷中带暖"], "description": "整体冷暖倾向（维度1）" },
+            "detail": { "type": "string", "description": "如「环境冷调但肤色保留暖意」" }
+          }
+        },
+        "contrast": {
+          "type": "object", "required": ["value"],
+          "properties": {
+            "value": { "type": "string", "enum": ["低", "中低", "中", "中高", "高"], "description": "对比度档位（维度2）" },
+            "detail": { "type": "string", "description": "明暗层次描述：亮部/中间调/暗部如何分布" }
+          }
+        },
+        "highlights_shadows": {
+          "type": "object", "required": ["highlight", "shadow", "black_point"],
+          "properties": {
+            "highlight": { "type": "string", "description": "高光形态：如「白纱高光保留布纹不炸」（维度3）" },
+            "shadow": { "type": "string", "description": "阴影形态：如「暗部有层次不死黑发闷」" },
+            "black_point": { "type": "string", "description": "黑位：如「黑位扎实/黑位抬升偏灰胶片感」" }
+          }
+        },
+        "saturation": {
+          "type": "object", "required": ["value", "main_hues"],
+          "properties": {
+            "value": { "type": "string", "enum": ["低", "中低", "中", "中高"], "description": "整体饱和度（维度4）" },
+            "main_hues": { "type": "array", "minItems": 1, "items": { "type": "string" }, "description": "主要颜色倾向，如 [草绿, 天蓝, 暖肤]" }
+          }
+        },
+        "skin_environment": { "type": "string", "description": "皮肤与环境色彩关系（维度5）：肤色是否被环境染色、是否唯一暖色焦点等。不得包含强制改肤指令（美白/古铜/小麦色禁止）" },
+        "texture": {
+          "type": "object", "required": ["grain", "softness", "photographic_quality"],
+          "properties": {
+            "grain": { "type": "string", "description": "颗粒：如「无颗粒/极轻微颗粒/胶片颗粒」（维度6）" },
+            "softness": { "type": "string", "description": "柔和度：如「整体柔和不糊」「锐利通透」" },
+            "photographic_quality": { "type": "string", "description": "摄影质感锚定词：只允许拍摄方式类（真人实拍/纪实摄影/真实皮肤纹理），禁 8K/电影质感（precheck AI_SHEEN 同罪）" }
+          }
+        },
+        "suitable": { "type": "array", "items": { "type": "string" }, "description": "适用场景（维度7），如 [黄昏, 草原, 海岸]" },
+        "unsuitable": { "type": "array", "items": { "type": "string" }, "description": "不适用场景，如 [正午硬光, 雪地]" },
+        "banned_anomalies": { "type": "array", "minItems": 1, "items": { "type": "string" }, "description": "禁止的AI感和异常色彩（维度8），如 [整体泛黄, 青绿偏色, 塑料肤色, HDR]" }
+      }
+    },
+    "prompt_fragments": {
+      "type": "object",
+      "required": ["core", "light_adapt_template", "skin_protection", "negative_addon"],
+      "description": "直接可注入提示词的成品片段（四、接入提示词生成）。core 受 250 token 预算约束。",
+      "properties": {
+        "core": { "type": "string", "maxLength": 60, "description": "主影调核心描述，写进每帧【色彩逻辑】的开头，≤60字。core_signature 从本字段自动截取" },
+        "light_adapt_template": { "type": "string", "maxLength": 60, "description": "当前场景光线适配的写法模板，{slot} 占位符由帧清单的光线列填入，写进【光影】" },
+        "skin_protection": { "type": "string", "maxLength": 60, "description": "真实肤色保护句，写进【人物皮肤】段尾追加" },
+        "negative_addon": { "type": "string", "maxLength": 80, "description": "本档专属负面词（来自 banned_anomalies 的提示词化），追加进每帧【负面约束】" }
+      }
+    },
+    "measured": {
+      "type": "object",
+      "description": "tone_extract.py 的量化测量结果（可选，机器可测才写，测不出的留 null，不许编造）",
+      "properties": {
+        "mean_rgb": { "type": ["array", "null"], "items": { "type": "number" } },
+        "r_b_delta": { "type": ["number", "null"], "description": "R-B 差值，冷暖的量化代理：正=偏暖，负=偏冷" },
+        "saturation_mean": { "type": ["number", "null"], "description": "平均饱和度 0~1" },
+        "contrast_stddev": { "type": ["number", "null"], "description": "亮度标准差，对比度代理" },
+        "highlight_pct": { "type": ["number", "null"], "description": "亮度≥230 像素占比 %" },
+        "shadow_pct": { "type": ["number", "null"], "description": "亮度<40 像素占比 %" },
+        "black_point_p1": { "type": ["number", "null"], "description": "亮度 1 分位数，黑位代理" },
+        "grain_proxy": { "type": ["number", "null"], "description": "高频边缘能量均值，颗粒感代理" },
+        "dominant_hues": { "type": ["array", "null"], "items": { "type": "string" } }
+      }
+    },
+    "core_signature": {
+      "type": "string",
+      "description": "precheck 用于核对每帧【色彩逻辑】是否带了主影调核心描述的特征子串（从 core 中人工挑 6~12 字）。留空则 T4 检查降级为 WARN"
+    },
+    "notes": { "type": "string", "description": "提取时的目检备注。⚠️ 相机参数/白平衡K值/调色曲线无法从成片反推，一律不得写入任何字段" }
+  }
+}

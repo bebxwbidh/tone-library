@@ -1,0 +1,3722 @@
+{
+ "version": "V2-auto-mine",
+ "generated_at": "2026-11-12T15:58:21",
+ "mode": "all",
+ "skin_reference": {
+  "mean_skin_warm_rel": 0.0815,
+  "n": 24,
+  "note": "character-library 24 张不参与影调聚类，仅作肤色保护参考（正值=肤色相对环境偏暖为常态）"
+ },
+ "stats": {
+  "read": 687,
+  "qualified": 680,
+  "screened_out": 7,
+  "failed": 0
+ },
+ "screened_out_ids": [
+  {
+   "lib": "aesthetics",
+   "id": "f4ok-___2025-05-05_171540_1_96___",
+   "reason": [
+    "underexposed"
+   ]
+  },
+  {
+   "lib": "aesthetics",
+   "id": "f5ok-H26A2005",
+   "reason": [
+    "low_contrast"
+   ]
+  },
+  {
+   "lib": "aesthetics",
+   "id": "f5ok-___2025-05-05_171540_1_182_2",
+   "reason": [
+    "low_contrast"
+   ]
+  },
+  {
+   "lib": "aesthetics",
+   "id": "f5ok-___2025-05-05_171540_1_182_3",
+   "reason": [
+    "low_contrast"
+   ]
+  },
+  {
+   "lib": "aesthetics",
+   "id": "f5ok-___2025-05-05_171540_1_183_1",
+   "reason": [
+    "low_contrast"
+   ]
+  },
+  {
+   "lib": "aesthetics",
+   "id": "misc-DSC04074",
+   "reason": [
+    "underexposed"
+   ]
+  },
+  {
+   "lib": "aesthetics",
+   "id": "misc-DSC04082",
+   "reason": [
+    "underexposed"
+   ]
+  }
+ ],
+ "failures": [],
+ "groups": [
+  {
+   "group_id": "tone-cand-01",
+   "description": "中性调、中等反差、饱和浓郁；暗部占比大；黑位扎实；肤色相对环境明显偏暖",
+   "centroid": {
+    "warm_cool": 0.0514,
+    "saturation": 0.4804,
+    "contrast": 47.6319,
+    "highlight_pct": 0.0071,
+    "shadow_pct": 0.3995,
+    "black_point": 11.2621,
+    "skin_warm_rel": 0.1476
+   },
+   "representative": [
+    {
+     "lib": "action",
+     "image_id": "3844dc47eac72a791a8de2fbfb688a91",
+     "thumb": "action-library\\thumbs\\3844dc47eac72a791a8de2fbfb688a91.jpg",
+     "repo": "bebxwbidh/action-library"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "single-DSC_3469",
+     "thumb": "aesthetics-library\\thumbs\\single-DSC_3469.jpg",
+     "repo": "bebxwbidh/aesthetics-library"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_67_5",
+     "thumb": "aesthetics-library\\thumbs\\f5ok-___2025-05-05_171540_1_67_5.jpg",
+     "repo": "bebxwbidh/aesthetics-library"
+    },
+    {
+     "lib": "action",
+     "image_id": "c65a19e9d297c38f3c4a441610c781f9",
+     "thumb": "action-library\\thumbs\\c65a19e9d297c38f3c4a441610c781f9.jpg",
+     "repo": "bebxwbidh/action-library"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-b20_wide_meadow_4K_land-1b2aab",
+     "thumb": "scene-library\\thumbs\\恰西-b20_wide_meadow_4K_land-1b2aab.jpg",
+     "repo": "bebxwbidh/scene-library"
+    }
+   ],
+   "source_ids": [
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1163"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1357"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1360"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1392"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1400"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1404"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1413"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1576"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1594"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-DSC03164"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2415"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2422"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2426"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2428"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2456"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2462"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2595"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2615"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_17___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_97_6"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_99_4"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3-DSC03485"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3-DSC03491"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3-DSC03496"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2629"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2675"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2700"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2757"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2785"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4-8e4d0b56695c035cd03df39ae0b81284"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4-DSC04060"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4-DSC04094"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4-DSC04214"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4-DSC04236"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4-DSC04417"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-___2025-05-05_171540_1_102___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-___2025-05-05_171540_1_268___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-___2025-05-05_171540_1_298___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-___2025-05-05_171540_1_309___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-___2025-05-05_171540_1_69"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-___2025-05-05_171540_1_69___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-___2025-05-05_171540_1_82___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-___2025-05-05_171540_1_89___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5-DSC05631"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5-DSC05668"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1722"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_130_1"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_189_5"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_65_11"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_67_5"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_81_3"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_81_6"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(158)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(79)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(95)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC04086-______"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC04100"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC04112"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC04129"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC04159___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC04170"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC_0868"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "single-5"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "single-DSC_3410"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "single-DSC_3469"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "single-DSC_3574_1"
+    },
+    {
+     "lib": "action",
+     "image_id": "0f59fd832cb7667349c872f702321b9d"
+    },
+    {
+     "lib": "action",
+     "image_id": "2c1c78a84b26d78611af0a014a5f9508"
+    },
+    {
+     "lib": "action",
+     "image_id": "3844dc47eac72a791a8de2fbfb688a91"
+    },
+    {
+     "lib": "action",
+     "image_id": "41ff4d14992cc818450fbb910340fcfe"
+    },
+    {
+     "lib": "action",
+     "image_id": "49341dc79424576c5e18aef97d30ff15"
+    },
+    {
+     "lib": "action",
+     "image_id": "4f2efc6e2d1e66bc41dbd500bdb264af"
+    },
+    {
+     "lib": "action",
+     "image_id": "4f69db5a4ccdca20987d650ef42b3410"
+    },
+    {
+     "lib": "action",
+     "image_id": "5228cba4da9c3b139e390a36923ec566"
+    },
+    {
+     "lib": "action",
+     "image_id": "c65a19e9d297c38f3c4a441610c781f9"
+    },
+    {
+     "lib": "action",
+     "image_id": "cab82ec0277a91c376a865057bdaaab1"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-v103_naren_summer_pasture_peak_4K-bf5577"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-v109_ridge_forest_snow_range_4K-1b8e3c"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-13-雪山松谷-超分4K-ce1e51"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-b05_snowpeak_wedding_4K_portrait-dc5a63"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-b09_forest_glade_4K_portrait-b45ba3"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-v47_pasture_cabins_meadow_4K-ea0d65"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-伊犁湖畔花海_横版4K-d3e98e"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-伊犁草原牧群_横版4K-1f17ab"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-Remove_the_bride_standing_on_t_2026-1-02fa0d"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-b13_meadow_run_4K_land-5eaacf"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-b20_wide_meadow_4K_land-1b2aab"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-v100_qiaxi_slope_horses_4K-14ed50"
+    },
+    {
+     "lib": "scene",
+     "image_id": "果子沟-v05_spruce_gap_4K-149f28"
+    },
+    {
+     "lib": "scene",
+     "image_id": "果子沟-v09_spruce_grove_4K-1eada9"
+    },
+    {
+     "lib": "scene",
+     "image_id": "果子沟-v17_dandelion_pasture_4K-838d91"
+    },
+    {
+     "lib": "scene",
+     "image_id": "果子沟-v18_meadow_spruce_4K-2b53d5"
+    },
+    {
+     "lib": "scene",
+     "image_id": "果子沟-v19_horses_meadow_4K-67f185"
+    },
+    {
+     "lib": "scene",
+     "image_id": "果子沟-v20_golden_slope_4K-30574f"
+    },
+    {
+     "lib": "scene",
+     "image_id": "果子沟-v48_kurdning_terrace_valley_4K-838348"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-秋-v22_pink_arch_4K-44b336"
+    },
+    {
+     "lib": "scene",
+     "image_id": "那拉提-28-那拉提艺术展-超分4K-16a221"
+    },
+    {
+     "lib": "scene",
+     "image_id": "那拉提-v91_wildflower_meadow_stream_4K-ad620c"
+    }
+   ],
+   "member_count": 98,
+   "lib_mix": {
+    "aesthetics": 66,
+    "action": 10,
+    "scene": 22
+   },
+   "suitable": [
+    "全天候通用",
+    "森林与草原",
+    "主要样本来源：bebxwbidh/aesthetics-library（66 张）"
+   ],
+   "confidence": 0.49,
+   "montage": "tone-profiles\\candidates\\tone-cand-01.jpg",
+   "status": "pending",
+   "generated_by": "tone_mine.py v2（自动挖掘，多维特征聚类）",
+   "reviewed_by": null,
+   "note": "未经用户审核的候选不得作为 master_tone_id（23号影调库规则 §9）"
+  },
+  {
+   "group_id": "tone-cand-02",
+   "description": "暖调、高反差、中等饱和；高光通透占比高；肤色相对环境明显偏暖",
+   "centroid": {
+    "warm_cool": 0.126,
+    "saturation": 0.2809,
+    "contrast": 73.2474,
+    "highlight_pct": 0.2357,
+    "shadow_pct": 0.1035,
+    "black_point": 22.1864,
+    "skin_warm_rel": 0.1685
+   },
+   "representative": [
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_8_4",
+     "thumb": "aesthetics-library\\thumbs\\f2ok-___2025-05-05_171540_1_8_4.jpg",
+     "repo": "bebxwbidh/aesthetics-library"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-DSC02780",
+     "thumb": "aesthetics-library\\thumbs\\f2-DSC02780.jpg",
+     "repo": "bebxwbidh/aesthetics-library"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2734",
+     "thumb": "aesthetics-library\\thumbs\\f3ok-H26A2734.jpg",
+     "repo": "bebxwbidh/aesthetics-library"
+    },
+    {
+     "lib": "scene",
+     "image_id": "果子沟-v11_glacier_meadow_4K-201fd4",
+     "thumb": "scene-library\\thumbs\\果子沟-v11_glacier_meadow_4K-201fd4.jpg",
+     "repo": "bebxwbidh/scene-library"
+    },
+    {
+     "lib": "action",
+     "image_id": "f61b1763de3d9134288993d9a7dc415d",
+     "thumb": "action-library\\thumbs\\f61b1763de3d9134288993d9a7dc415d.jpg",
+     "repo": "bebxwbidh/action-library"
+    }
+   ],
+   "source_ids": [
+    {
+     "lib": "aesthetics",
+     "image_id": "f1-755441a8481698371353bfd155c50307"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1-a36c4bb623d4987a4d6f9cd5cbd68afc"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1-df450f6142be67e7503abdccdd572bd8"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_37"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-DSC02645"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-DSC02677"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-DSC02681"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-DSC02684"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-DSC02773"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-DSC02780"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-DSC02798"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-DSC02820"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-DSC02910"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1414"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1550"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_100_2"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_100_3"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_11___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_128___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_15___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_86___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_8_4"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2729"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2734"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2739"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5-c398071222881e60680ee1a201081d80"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1658"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1965"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A2050"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A2075"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_233_2"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(115)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC_9102"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(108)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(110)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(115)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(117)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(152)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(164)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(195)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(46)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(57)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(60)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(80)"
+    },
+    {
+     "lib": "action",
+     "image_id": "442e628347b8aec1f0f9bd7939d90102"
+    },
+    {
+     "lib": "action",
+     "image_id": "9977014b37ab6c42007483d539eef05e"
+    },
+    {
+     "lib": "action",
+     "image_id": "a26adcfcbf3a852770aa24adaee4fd20"
+    },
+    {
+     "lib": "action",
+     "image_id": "aa1f6c722ef239598b306643847e8150"
+    },
+    {
+     "lib": "action",
+     "image_id": "b4758c8a649fa7bc937d36baf3508fe6"
+    },
+    {
+     "lib": "action",
+     "image_id": "bd0f5fd46686c0b99d72a9a9f9e8c049"
+    },
+    {
+     "lib": "action",
+     "image_id": "c9653098bd22c015b6d0e6f4eeb33f36"
+    },
+    {
+     "lib": "action",
+     "image_id": "cda531af60e2529ebee7e44a943c05a4"
+    },
+    {
+     "lib": "action",
+     "image_id": "e5942507d9cc837af5e08eb8ed818e58"
+    },
+    {
+     "lib": "action",
+     "image_id": "f61b1763de3d9134288993d9a7dc415d"
+    },
+    {
+     "lib": "action",
+     "image_id": "f72be264b186dcb9e9a3053049e5e650"
+    },
+    {
+     "lib": "action",
+     "image_id": "赛里木湖夕阳_3_梅森迷了🦌_来自小红书网页版"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-14-绿谷土路-超分4K-80d7a2"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-01-恰西绿谷-超分4K-50528d"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-02-恰西林海马-超分4K-ef2288"
+    },
+    {
+     "lib": "scene",
+     "image_id": "果子沟-v11_glacier_meadow_4K-201fd4"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-春夏-b10_flower_meadow_4K_land-fcaa3f"
+    }
+   ],
+   "member_count": 61,
+   "lib_mix": {
+    "aesthetics": 44,
+    "action": 12,
+    "scene": 5
+   },
+   "suitable": [
+    "黄昏/逆光场景",
+    "秋景草地",
+    "暖色建筑与室内",
+    "大场景气势帧",
+    "主要样本来源：bebxwbidh/aesthetics-library（44 张）"
+   ],
+   "confidence": 0.44,
+   "montage": "tone-profiles\\candidates\\tone-cand-02.jpg",
+   "status": "approved",
+   "generated_by": "tone_mine.py v2（自动挖掘，多维特征聚类）",
+   "reviewed_by": "用户",
+   "note": "未经用户审核的候选不得作为 master_tone_id（23号影调库规则 §9）",
+   "reviewed_at": "2026-11-12T11:31"
+  },
+  {
+   "group_id": "tone-cand-03",
+   "description": "中性调、高反差、中等饱和；暗部占比大；黑位扎实；肤色相对环境明显偏暖",
+   "centroid": {
+    "warm_cool": -0.003,
+    "saturation": 0.3098,
+    "contrast": 70.1008,
+    "highlight_pct": 0.0404,
+    "shadow_pct": 0.2053,
+    "black_point": 11.1163,
+    "skin_warm_rel": 0.2369
+   },
+   "representative": [
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_83___",
+     "thumb": "aesthetics-library\\thumbs\\f2ok-___2025-05-05_171540_1_83___.jpg",
+     "repo": "bebxwbidh/aesthetics-library"
+    },
+    {
+     "lib": "action",
+     "image_id": "20aaf70a2814979a3c25c60fde8aa79b",
+     "thumb": "action-library\\thumbs\\20aaf70a2814979a3c25c60fde8aa79b.jpg",
+     "repo": "bebxwbidh/action-library"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2643",
+     "thumb": "aesthetics-library\\thumbs\\f3ok-H26A2643.jpg",
+     "repo": "bebxwbidh/aesthetics-library"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-v40_arch_aisle_evening_4K-f94900",
+     "thumb": "scene-library\\thumbs\\恰西-v40_arch_aisle_evening_4K-f94900.jpg",
+     "repo": "bebxwbidh/scene-library"
+    },
+    {
+     "lib": "action",
+     "image_id": "3cb4769ace29b5c3ba65720e768055b8",
+     "thumb": "action-library\\thumbs\\3cb4769ace29b5c3ba65720e768055b8.jpg",
+     "repo": "bebxwbidh/action-library"
+    }
+   ],
+   "source_ids": [
+    {
+     "lib": "aesthetics",
+     "image_id": "f1-DSC01953"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1-DSC01989"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1-DSC02012"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1-DSC02079"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1-DSC02110"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1-DSC02124"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1-DSC02178"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1-DSC02214"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1-DSC02382"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1-DSC02391"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1-DSC02407"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1-DSC02415"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1-DSC02443"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1-DSC02481"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1-DSC02499"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1-DSC02508"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1-d5e8d51d1aae72ca0ec857bbf234a739"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1264"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_25"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-DSC02533"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-DSC02747"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-DSC02754"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-DSC02977"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-DSC03318"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-DSC03321"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-DSC03325"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1189"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1198"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1204"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1217"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1308"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1316"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1323"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1355"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1450"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1453"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1454"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1462"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1463"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1464"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1484"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1485"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1487"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1508"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1568"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1609"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1699"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2263"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2303"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2348"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2506"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2557"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2593"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_77___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_82___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_83___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_85___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_90___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_91_6"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_94_3"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3-1a4b3ec6a678780b4bacdbee022ab0ad"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3-DSC03463"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3-DSC03613"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3-d3556590108ab7ac4cb6437d0ba54834"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2643"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2645"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2650"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2656"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2669"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2672"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2747"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2753"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2767"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2770"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2773"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2795"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2808"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2810"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2819"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4-7090863a97ab2ab91b9b732be7a23f0a"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-H26A2858"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-H26A2903"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-H26A2914"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-H26A3138"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-H26A3199"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-H26A3212"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1630"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1641"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1820"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1910"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1912"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1931"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1978"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_253_1"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f6-DSC03887"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f6-DSC03972"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f6-DSC03984"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f6-f18a55fe22f4e372f4ce780559981bd7"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(123)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(135)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(141)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(143)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(167)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(168)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(186)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(187)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(188)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(199)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(216)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(246)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(261)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(269)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(48)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-7V2A9936"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC04997"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC05010"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC05043"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC05083"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC05119"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC05143"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC05163"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC05227"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC05328"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC05349"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC_0956"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC_1292"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC_9539"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2133"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2191"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2213"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2217"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2365"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(104)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(29)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(52)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(86)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(89)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "single-DSC_3438"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "single-DSC_3533"
+    },
+    {
+     "lib": "action",
+     "image_id": "0e8dbe34edb3bfc7adfd658a9b1ff361"
+    },
+    {
+     "lib": "action",
+     "image_id": "10ebcf54f333b1745c639857c6128042"
+    },
+    {
+     "lib": "action",
+     "image_id": "1a4fb41dca65270f3d07a855790b5b02"
+    },
+    {
+     "lib": "action",
+     "image_id": "20aaf70a2814979a3c25c60fde8aa79b"
+    },
+    {
+     "lib": "action",
+     "image_id": "2167236f3a30c80f61ccfce8de1b7010"
+    },
+    {
+     "lib": "action",
+     "image_id": "21b8a4b367fc9221eaf0c1b16f9e3aa0"
+    },
+    {
+     "lib": "action",
+     "image_id": "22a32695a2842d8e7a952a55441bf1cc"
+    },
+    {
+     "lib": "action",
+     "image_id": "2bbbf034aa83e382d2b91e518546ea10"
+    },
+    {
+     "lib": "action",
+     "image_id": "3cb4769ace29b5c3ba65720e768055b8"
+    },
+    {
+     "lib": "action",
+     "image_id": "3d5df50e435d9899a339bc2e83277a0b"
+    },
+    {
+     "lib": "action",
+     "image_id": "467e7c98e91222f05bab84d4aa7545a3"
+    },
+    {
+     "lib": "action",
+     "image_id": "688ade6707dcd0a8d6a7fe6625a04cd0"
+    },
+    {
+     "lib": "action",
+     "image_id": "924aa5f5fe7482967f3b8213c7cd161f"
+    },
+    {
+     "lib": "action",
+     "image_id": "H26A2810"
+    },
+    {
+     "lib": "action",
+     "image_id": "a0f2b3e7cc7e947dabddf7b903cd35a2"
+    },
+    {
+     "lib": "action",
+     "image_id": "ae62cd31d711513f612b67fbe869561d"
+    },
+    {
+     "lib": "action",
+     "image_id": "d4cf919447981d4b094b1181ef9869ff"
+    },
+    {
+     "lib": "action",
+     "image_id": "dc4884ecc8aad9fbdde0ae3e1da2dba6"
+    },
+    {
+     "lib": "action",
+     "image_id": "e8520b5085409e75c052f2b3133f71ed"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-02_夏塔空镜_举手位置-c8ecc4"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-03-天山旷野-超分4K-1feb64"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-04-夏塔八月雪山-超分4K-232824"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-08-在夏塔-超分4K-b6eb6c"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-b02_spruce_couple_4K_portrait-986b9e"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-v95_meadow_snow_peak_cloud_4K-701d97"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-v98_meadow_fence_snow_peaks_4K-2388e1"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-05-云杉林海-超分4K-1f15d1"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-Remove_the_wedding_couple_stan_20-4ec0ba"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-b12_snow_forest_meadow_4K_land-d72d71"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-kurd1_4K_landscape-0e5910"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-kurd2b_4K_landscape-f625e9"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-kurdening_4K_landscape-2d534f"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-s2_glacier_arch_4K-17de99"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-v35_snow_mountain_spruce_4K-759848"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-b16_spruce_ridge_4K_land-3e65a6"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-b17_sunset_daisy_4K_land-9f6b59"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-b19_dandelion_slope_4K_land-484d2d"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-v38_meadow_aisle_wide_4K-35308c"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-v39_sunlit_arch_aisle_4K-31b2fb"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-v40_arch_aisle_evening_4K-f94900"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-v42_snow_ridge_meadow_4K-7908e8"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-v83_cloudy_meadow_valley_4K-b83802"
+    },
+    {
+     "lib": "scene",
+     "image_id": "果子沟-Remove_the_bride_standing_on_t_2026--821c44"
+    },
+    {
+     "lib": "scene",
+     "image_id": "果子沟-Remove_the_wedding_couple_stan_2026--ec2e3e"
+    },
+    {
+     "lib": "scene",
+     "image_id": "果子沟-v24_white_flower_path_4K-603fc6"
+    },
+    {
+     "lib": "scene",
+     "image_id": "果子沟-v29_snow_peak_spruce_4K-28a23f"
+    },
+    {
+     "lib": "scene",
+     "image_id": "果子沟-v32_spruce_forest_edge_4K-7526fd"
+    },
+    {
+     "lib": "scene",
+     "image_id": "果子沟-v37_cake_table_meadow_4K-c9b84c"
+    },
+    {
+     "lib": "scene",
+     "image_id": "果子沟-v80_sunset_snow_ridge_4K-c8bba4"
+    },
+    {
+     "lib": "scene",
+     "image_id": "那拉提-20-那拉提夕阳-超分4K-3aac7c"
+    },
+    {
+     "lib": "scene",
+     "image_id": "那拉提-v93_stream_spruce_snow_peak_4K-b3a835"
+    },
+    {
+     "lib": "scene",
+     "image_id": "那拉提-新疆空中草原_那拉提_一切都美的都刚刚好_3_ele-finnick_来-3194a0"
+    }
+   ],
+   "member_count": 191,
+   "lib_mix": {
+    "aesthetics": 139,
+    "action": 19,
+    "scene": 33
+   },
+   "suitable": [
+    "全天候通用",
+    "森林与草原",
+    "大场景气势帧",
+    "主要样本来源：bebxwbidh/aesthetics-library（139 张）"
+   ],
+   "confidence": 0.53,
+   "montage": "tone-profiles\\candidates\\tone-cand-03.jpg",
+   "status": "pending",
+   "generated_by": "tone_mine.py v2（自动挖掘，多维特征聚类）",
+   "reviewed_by": null,
+   "note": "未经用户审核的候选不得作为 master_tone_id（23号影调库规则 §9）"
+  },
+  {
+   "group_id": "tone-cand-04",
+   "description": "冷调（蓝青倾向）、中等反差、饱和浓郁；肤色相对环境明显偏暖",
+   "centroid": {
+    "warm_cool": -0.3408,
+    "saturation": 0.4349,
+    "contrast": 53.5975,
+    "highlight_pct": 0.0367,
+    "shadow_pct": 0.106,
+    "black_point": 27.0744,
+    "skin_warm_rel": 0.2285
+   },
+   "representative": [
+    {
+     "lib": "scene",
+     "image_id": "恰西-10-雪山骏马-超分4K-1be02c",
+     "thumb": "scene-library\\thumbs\\恰西-10-雪山骏马-超分4K-1be02c.jpg",
+     "repo": "bebxwbidh/scene-library"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_57",
+     "thumb": "aesthetics-library\\thumbs\\f1ok-___2025-05-05_171540_1_57.jpg",
+     "repo": "bebxwbidh/aesthetics-library"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-___2025-05-05_171540_1_295___",
+     "thumb": "aesthetics-library\\thumbs\\f4ok-___2025-05-05_171540_1_295___.jpg",
+     "repo": "bebxwbidh/aesthetics-library"
+    },
+    {
+     "lib": "action",
+     "image_id": "e5b09f6a23b81381456c142aa74a6694",
+     "thumb": "action-library\\thumbs\\e5b09f6a23b81381456c142aa74a6694.jpg",
+     "repo": "bebxwbidh/action-library"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-v84_snow_peaks_meadow_road_4K-1fe796",
+     "thumb": "scene-library\\thumbs\\夏塔-v84_snow_peaks_meadow_road_4K-1fe796.jpg",
+     "repo": "bebxwbidh/scene-library"
+    }
+   ],
+   "source_ids": [
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_16_4(1)___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_2_12___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_2_14___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_36"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_39"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_44"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_51"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_57"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_58"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_62"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_66"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_7"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_8_12___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_8_13___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2141"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2221"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2248"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2298"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2334"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_38___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2661"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2834"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2836"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-H26A2883"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-H26A2889"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-H26A2942_1"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-H26A2964_1"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-H26A2999_1"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-H26A3034"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-H26A3070"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-H26A3079"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-H26A3260"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-___2025-05-05_171540_1_280"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-___2025-05-05_171540_1_285"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-___2025-05-05_171540_1_293___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-___2025-05-05_171540_1_294___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-___2025-05-05_171540_1_295___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-___2025-05-05_171540_1_303___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4ok-___2025-05-05_171540_1_5_8"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(19)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC05370"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC_0450"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2280"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2288"
+    },
+    {
+     "lib": "action",
+     "image_id": "208a64bb54fd9117a3d5c245b5f6c9a0"
+    },
+    {
+     "lib": "action",
+     "image_id": "3a1abb997384167c811d1b71b2aa5e72"
+    },
+    {
+     "lib": "action",
+     "image_id": "42f3426c8d6ec2b8c24544bf54e32880"
+    },
+    {
+     "lib": "action",
+     "image_id": "543aa389cbaa0840cc81a25de757dda0"
+    },
+    {
+     "lib": "action",
+     "image_id": "5c2ffdcc37b7d8d127abd3bbfe75e33e"
+    },
+    {
+     "lib": "action",
+     "image_id": "65006ead50aad37539ef799474cf0e4f"
+    },
+    {
+     "lib": "action",
+     "image_id": "98ae539214633e0a35de7c29f73c865c"
+    },
+    {
+     "lib": "action",
+     "image_id": "a8d2ab25c07c1735f1f673f1f417afaa"
+    },
+    {
+     "lib": "action",
+     "image_id": "e5b09f6a23b81381456c142aa74a6694"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-01_夏塔空镜_雪山松林-f1ca8e"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-02-夏塔冰川-超分4K-2842c6"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-06-夏塔日照金山-超分4K-c16903"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-11-伊犁札记-超分4K-02a542"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-17-夏塔八月雪山2-超分4K-d3a8d9"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-18-夏塔清晨-超分4K-073edf"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-Remove_the_bride_standing_on_t_2026-1-ccdfff"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-Remove_the_wedding_couple_and__2026-1-f7f567"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-b07_butterfly_veil_4K_portrait-695a6a"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-v102_cloud_massif_spruce_flower_meado-116edb"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-v106_meadow_spruce_wall_snowpeaks_4K-b28560"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-v108_alpine_meadow_solitary_tree_4K-f55817"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-v71_snow_peak_spruce_slope_4K-3f6deb"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-v84_snow_peaks_meadow_road_4K-1fe796"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-夏塔日照金山_横版4K-74330f"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-夏塔日照金山_竖版全画幅_4K-812184"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-16-雪峰草甸-超分4K-81c60f"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-s3_glacier_aisle_4K-a76820"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-v86_spruce_forest_snow_slope_4K-7d92b0"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-伊犁雪山云杉_横版4K-baf68d"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁秋冬-v31_snow_flower_arch_4K-738d46"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-06-雪峰林海-超分4K-5f5381"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-09-恰西河谷-超分4K-01013d"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-10-雪山骏马-超分4K-1be02c"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-11-雪山松谷-超分4K-b8f18e"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-14-松林山坡-超分4K-150936"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-Remove_the_wedding_couple_and__2026-1-d3826f"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-b18_alpine_slope_4K_land-8d63b3"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-v99_qiaxi_meadow_snow_peaks_4K-914f2c"
+    },
+    {
+     "lib": "scene",
+     "image_id": "果子沟-v105_meadow_valley_snow_range_4K-3d3d20"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-冬-02-赛湖蓝-超分4K-de6eba"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-冬-04-初冬赛湖-超分4K-6d24cf"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-冬-07-堤道雪山-超分4K-2f6a76"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-冬-10-冬湖壁纸-超分4K-9794e1"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-冬-12-高原大湖-超分4K-91e191"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-冬-20-冬日蓝湖-超分4K-34c5ee"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-冬-b11_swan_shore_4K_land-2665c3"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-冬-b22_swan_shore_4K_land-b90423"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-冬-b24_blueice_sky_4K_land-736347"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-冬-blueice6_4K_landscape-25b265"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-冬-blueice_nofence_4K-abb593"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-冬-snow6_4K_portrait-434ac0"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-冬-v104_winter_lake_snow_shore_4K-404215"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-冬-v73_frozen_lake_snow_range_4K-0d2dc1"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-冬-v81_frozen_lake_snow_range_4K-4d39f2"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-冬-v85_sayram_lake_snow_shore_4K-c94687"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-春夏-03-碎石滩纯净-超分4K-6fefb0"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-春夏-19-俯瞰大湖-超分4K-7f0e81"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-春夏-b03_guitar_meadow_4K_portrait-569843"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-春夏-b15_flower_lake_4K_land-aaf784"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-秋-11-金光湖岸-超分4K-801b14"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-秋-b01_lake_parasol_4K_portrait-0d006e"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-秋-swan2_4K_landscape-e87cc9"
+    },
+    {
+     "lib": "scene",
+     "image_id": "那拉提-23-最美那拉提-超分4K-a19dff"
+    }
+   ],
+   "member_count": 107,
+   "lib_mix": {
+    "aesthetics": 44,
+    "action": 9,
+    "scene": 54
+   },
+   "suitable": [
+    "雪山/冰川",
+    "水边与阴天",
+    "现代都市夜景前段",
+    "主要样本来源：bebxwbidh/scene-library（54 张）"
+   ],
+   "confidence": 0.34,
+   "montage": "tone-profiles\\candidates\\tone-cand-04.jpg",
+   "status": "pending",
+   "generated_by": "tone_mine.py v2（自动挖掘，多维特征聚类）",
+   "reviewed_by": null,
+   "note": "未经用户审核的候选不得作为 master_tone_id（23号影调库规则 §9）"
+  },
+  {
+   "group_id": "tone-cand-05",
+   "description": "中性调、中等反差、中等饱和；肤色相对环境明显偏暖",
+   "centroid": {
+    "warm_cool": 0.005,
+    "saturation": 0.3084,
+    "contrast": 48.1481,
+    "highlight_pct": 0.0396,
+    "shadow_pct": 0.0308,
+    "black_point": 40.549,
+    "skin_warm_rel": 0.2523
+   },
+   "representative": [
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_94_1",
+     "thumb": "aesthetics-library\\thumbs\\f2ok-___2025-05-05_171540_1_94_1.jpg",
+     "repo": "bebxwbidh/aesthetics-library"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2380",
+     "thumb": "aesthetics-library\\thumbs\\misc-H26A2380.jpg",
+     "repo": "bebxwbidh/aesthetics-library"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_249_1",
+     "thumb": "aesthetics-library\\thumbs\\f5ok-___2025-05-05_171540_1_249_1.jpg",
+     "repo": "bebxwbidh/aesthetics-library"
+    },
+    {
+     "lib": "action",
+     "image_id": "f6b70f8f5283fd1b873a33467ee2cd3f",
+     "thumb": "action-library\\thumbs\\f6b70f8f5283fd1b873a33467ee2cd3f.jpg",
+     "repo": "bebxwbidh/action-library"
+    },
+    {
+     "lib": "action",
+     "image_id": "fe8a78eb2af773c14cb150b695be1ad2",
+     "thumb": "action-library\\thumbs\\fe8a78eb2af773c14cb150b695be1ad2.jpg",
+     "repo": "bebxwbidh/action-library"
+    }
+   ],
+   "source_ids": [
+    {
+     "lib": "aesthetics",
+     "image_id": "f1-DSC02185"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1499"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1503"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1507"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_13_4(1)___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_17_12___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_20"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_21"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_32"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_33"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_40"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_41"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_49"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_72"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_7_11___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-___2025-05-05_171540_1_8_14___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-DSC03004"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-DSC03351"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1149-__"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1160"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-XY__1163"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2186"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2187"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2224"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2252"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2268"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2285"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2507"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2521"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_80___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_94_1"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2725"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4-DSC04464"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1922"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_174_1"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_175_2"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_188_1"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_205_1"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_210_2"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_216_2"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_226_6"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_227_1"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_231_4"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_249_1"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_251_2"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_251_3"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_258_2"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(23)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(255)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(275)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-03"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-1"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-2"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-4(1)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-4"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-4555"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-5"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-6(1)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-6"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-7"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-8"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-9"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC09947"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC09966"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC_1180"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC_9109"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2148"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2195"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2208"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2225"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2241"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2271"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2283"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2293"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2296"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2319"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2320"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2340"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2346"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2350"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2368"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2373"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2378"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2380"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2385"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2400"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2401"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2418"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(18)"
+    },
+    {
+     "lib": "action",
+     "image_id": "0911a83eaf577fdcc05dee8da32dcad7"
+    },
+    {
+     "lib": "action",
+     "image_id": "160dac43ae9274926a35fdbe6222e834"
+    },
+    {
+     "lib": "action",
+     "image_id": "3dd05adb3d26a885508c6d0839c77b51"
+    },
+    {
+     "lib": "action",
+     "image_id": "4b66fb60f0485c0f2a5783e2d44805fa"
+    },
+    {
+     "lib": "action",
+     "image_id": "6c438bd712cea005d8192df3b4b00eec"
+    },
+    {
+     "lib": "action",
+     "image_id": "95d7f230017ea7bd678d0c10fb7f4261"
+    },
+    {
+     "lib": "action",
+     "image_id": "b2e3d1546d6f4dfa2b61c4aa18a55d8f"
+    },
+    {
+     "lib": "action",
+     "image_id": "cb321845a6ea03bdb66f74ce736531ce"
+    },
+    {
+     "lib": "action",
+     "image_id": "d819f7e4bcc3280c4e9631fe781252d9"
+    },
+    {
+     "lib": "action",
+     "image_id": "f6b70f8f5283fd1b873a33467ee2cd3f"
+    },
+    {
+     "lib": "action",
+     "image_id": "fad9e9b583f23bdbcd4bcc4e375bc583"
+    },
+    {
+     "lib": "action",
+     "image_id": "fe8a78eb2af773c14cb150b695be1ad2"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-Remove_all_the_people_and_all__2026-1-73c40d"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-b21_glacier_wall_4K_land-843ea8"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-09-草原木屋-超分4K-87e171"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-v43_snow_massif_stream_4K-c9bdce"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-wed6_4K_portrait-a7092e"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-07-蓝色水库-超分4K-c38f74"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-v101_rolling_meadow_snow_range_4K-1b9d9f"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-v107_wildflower_valley_ridges_4K-68a18e"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-v90_camp_valley_golden_peak_4K-6bdc17"
+    },
+    {
+     "lib": "scene",
+     "image_id": "果子沟-v34_green_arch_meadow_4K-0de2f4"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-冬-b23_blueice_range_4K_land-69e56a"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-冬-v72_pink_range_lake_4K-edeada"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-春夏-b14_lake_meadow_4K_land-bc3c97"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-秋-08-十号赛湖-超分4K-d37fe1"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-秋-Remove_all_the_people_and_all__20-daab4d"
+    },
+    {
+     "lib": "scene",
+     "image_id": "赛里木湖-秋-swan4_4K_landscape-ce91eb"
+    },
+    {
+     "lib": "scene",
+     "image_id": "那拉提-21-空中草原意义-超分4K-763a32"
+    },
+    {
+     "lib": "scene",
+     "image_id": "那拉提-29-那拉提人生旷野-超分4K-f09a2b"
+    },
+    {
+     "lib": "scene",
+     "image_id": "那拉提-v89_green_meadow_snow_peak_4K-c0ce00"
+    }
+   ],
+   "member_count": 120,
+   "lib_mix": {
+    "aesthetics": 89,
+    "action": 12,
+    "scene": 19
+   },
+   "suitable": [
+    "全天候通用",
+    "森林与草原",
+    "主要样本来源：bebxwbidh/aesthetics-library（89 张）"
+   ],
+   "confidence": 0.47,
+   "montage": "tone-profiles\\candidates\\tone-cand-05.jpg",
+   "status": "pending",
+   "generated_by": "tone_mine.py v2（自动挖掘，多维特征聚类）",
+   "reviewed_by": null,
+   "note": "未经用户审核的候选不得作为 master_tone_id（23号影调库规则 §9）"
+  },
+  {
+   "group_id": "tone-cand-06",
+   "description": "暖调（偏金黄暖意）、中等反差、饱和浓郁；暗部占比大；肤色相对环境明显偏暖",
+   "centroid": {
+    "warm_cool": 0.3136,
+    "saturation": 0.5082,
+    "contrast": 50.4069,
+    "highlight_pct": 0.0197,
+    "shadow_pct": 0.1614,
+    "black_point": 18.2752,
+    "skin_warm_rel": 0.1289
+   },
+   "representative": [
+    {
+     "lib": "action",
+     "image_id": "cd2fbf0008cf316e887f7ce884c72f3c",
+     "thumb": "action-library\\thumbs\\cd2fbf0008cf316e887f7ce884c72f3c.jpg",
+     "repo": "bebxwbidh/action-library"
+    },
+    {
+     "lib": "action",
+     "image_id": "f3a620f1181e07afd321f501f6a91641",
+     "thumb": "action-library\\thumbs\\f3a620f1181e07afd321f501f6a91641.jpg",
+     "repo": "bebxwbidh/action-library"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1537",
+     "thumb": "aesthetics-library\\thumbs\\f1ok-H26A1537.jpg",
+     "repo": "bebxwbidh/aesthetics-library"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1268",
+     "thumb": "aesthetics-library\\thumbs\\f1ok-H26A1268.jpg",
+     "repo": "bebxwbidh/aesthetics-library"
+    },
+    {
+     "lib": "scene",
+     "image_id": "果子沟-v15_sunset_venue_4K-85c11a",
+     "thumb": "scene-library\\thumbs\\果子沟-v15_sunset_venue_4K-85c11a.jpg",
+     "repo": "bebxwbidh/scene-library"
+    }
+   ],
+   "source_ids": [
+    {
+     "lib": "aesthetics",
+     "image_id": "f1-DSC02180"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1166"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1198"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1209"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1212"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1221"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1268"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1293"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1300"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1303"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1322"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1339"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1411"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1419"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1514"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1537"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1568"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f1ok-H26A1590"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-DSC02550"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2-DSC03355"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2511"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-H26A2569"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_114___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_20___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_32___"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f2ok-___2025-05-05_171540_1_97_7"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3-DSC03518"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3-DSC03519"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3-DSC03523"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3-DSC03529"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3-DSC03561"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3-DSC03573"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2709"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2764"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f3ok-H26A2777"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f4-791852c066571a0ef629d53b1805e054"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5-DSC04871"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1679"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1691"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1729"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1743"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1749"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1765"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1768"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1775"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1868"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1874"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1892"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A1991"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A2008"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A2018"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A2021"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A2022"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A2043"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-H26A2092"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_203_1"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_211_1"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_220_1"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_235_1"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "f5ok-___2025-05-05_171540_1_248_2"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(162)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(217)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(240)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(249)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(51)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(62)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "fb-b_(83)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC_0741"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC_0998"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-DSC_1706"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-H26A2107"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(133)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(173)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(175)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(176)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(191)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(38)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(94)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "misc-c_(95)"
+    },
+    {
+     "lib": "aesthetics",
+     "image_id": "single-DSC_3566_1"
+    },
+    {
+     "lib": "action",
+     "image_id": "0a47766b47de00db33d3fe07d74f67f1"
+    },
+    {
+     "lib": "action",
+     "image_id": "54b6464dbc40894ea74e313a245a1669"
+    },
+    {
+     "lib": "action",
+     "image_id": "67f23eb234e107b917361634d42efc47"
+    },
+    {
+     "lib": "action",
+     "image_id": "7c38b65d6eee2d6e7e211bcb885559fd"
+    },
+    {
+     "lib": "action",
+     "image_id": "80ea44cea61e87240e775e829730a886"
+    },
+    {
+     "lib": "action",
+     "image_id": "a90fd0da0a888738dda5f7d3945141cb"
+    },
+    {
+     "lib": "action",
+     "image_id": "cd2fbf0008cf316e887f7ce884c72f3c"
+    },
+    {
+     "lib": "action",
+     "image_id": "d300fe95d771baa83a9838f2b7d1765c"
+    },
+    {
+     "lib": "action",
+     "image_id": "f3a620f1181e07afd321f501f6a91641"
+    },
+    {
+     "lib": "action",
+     "image_id": "hunsha_yunshan_caoping_qushuiyin"
+    },
+    {
+     "lib": "action",
+     "image_id": "人间值得新疆旅拍‼️恰西森系草原雪山婚纱照_4_17序vision全球旅拍_来自小红书网页版"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-05-夏塔年度九图-超分4K-65cce7"
+    },
+    {
+     "lib": "scene",
+     "image_id": "夏塔-v82_alpine_meadow_spruce_wall_4K-5f10c5"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-kurd7_4K_landscape-c02867"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-v30_apple_blossom_tree_4K-52c964"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁春夏-v44_spruce_shade_lawn_4K-492bd3"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁秋冬-v07_rapeseed_field_4K-7a66c1"
+    },
+    {
+     "lib": "scene",
+     "image_id": "库尔德宁秋冬-v28_qiaxi_golden_sea_4K-28a889"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-04-山丘牛群-超分4K-be80c3"
+    },
+    {
+     "lib": "scene",
+     "image_id": "恰西-13-高原花海-超分4K-b26c09"
+    },
+    {
+     "lib": "scene",
+     "image_id": "果子沟-v15_sunset_venue_4K-85c11a"
+    },
+    {
+     "lib": "scene",
+     "image_id": "那拉提-08-那拉提蒙古包-超分4K-c90f0c"
+    },
+    {
+     "lib": "scene",
+     "image_id": "那拉提-s1_stream_log_4K-afc94f"
+    }
+   ],
+   "member_count": 103,
+   "lib_mix": {
+    "aesthetics": 80,
+    "action": 11,
+    "scene": 12
+   },
+   "suitable": [
+    "黄昏/逆光场景",
+    "秋景草地",
+    "暖色建筑与室内",
+    "主要样本来源：bebxwbidh/aesthetics-library（80 张）"
+   ],
+   "confidence": 0.48,
+   "montage": "tone-profiles\\candidates\\tone-cand-06.jpg",
+   "status": "pending",
+   "generated_by": "tone_mine.py v2（自动挖掘，多维特征聚类）",
+   "reviewed_by": null,
+   "note": "未经用户审核的候选不得作为 master_tone_id（23号影调库规则 §9）"
+  },
+  {
+   "group_id": "tone-cand-07",
+   "description": "暖调、低反差柔和、中等饱和；暗部提亮不死黑；白纱纯白微暖，肤色自然暖润",
+   "centroid": {
+    "warm_cool": 0.0791,
+    "saturation": 0.1756,
+    "contrast": 53.8225,
+    "highlight_pct": 0.0,
+    "shadow_pct": 0.0,
+    "black_point": 61.734,
+    "skin_warm_rel": 0.0986
+   },
+   "representative": [
+    {
+     "lib": "tone-profiles",
+     "image_id": "tone-cand-07-ref",
+     "thumb": "tone-profiles\\candidates\\tone-cand-07-ref.jpg",
+     "repo": "local"
+    }
+   ],
+   "source_ids": [
+    {
+     "lib": "derived",
+     "image_id": "tone-cand-02"
+    }
+   ],
+   "member_count": 0,
+   "lib_mix": {},
+   "suitable": [
+    "建议用途：室内/阴天柔光婚礼、纪实叙事帧",
+    "派生自 tone-cand-02（暖调、高反差、中等饱和；高光通透占比高；…）"
+   ],
+   "confidence": null,
+   "montage": "tone-profiles\\candidates\\tone-cand-07-ref.jpg",
+   "status": "pending",
+   "generated_by": "tone_variant.py（路线B：母版+确定性调色派生）",
+   "reviewed_by": null,
+   "note": "派生候选必须用自带 swatch 作影调参考图出图验证，不能只靠文字描述",
+   "derived_from": "tone-cand-02",
+   "variant_name": "暖调柔光",
+   "grade": {
+    "r_gain": 1.02,
+    "b_gain": 0.99,
+    "contrast": 0.72,
+    "saturation": 0.92,
+    "lift": 10
+   },
+   "swatch": "tone-profiles\\candidates\\tone-cand-07-ref.jpg"
+  },
+  {
+   "group_id": "tone-cand-08",
+   "description": "中性偏暖、中等反差、低饱和；色调克制留灰，白纱纯白，肤色不那么橙",
+   "centroid": {
+    "warm_cool": 0.023,
+    "saturation": 0.1685,
+    "contrast": 71.7763,
+    "highlight_pct": 0.1226,
+    "shadow_pct": 0.0401,
+    "black_point": 31.027,
+    "skin_warm_rel": 0.0
+   },
+   "representative": [
+    {
+     "lib": "tone-profiles",
+     "image_id": "tone-cand-08-ref",
+     "thumb": "tone-profiles\\candidates\\tone-cand-08-ref.jpg",
+     "repo": "local"
+    }
+   ],
+   "source_ids": [
+    {
+     "lib": "derived",
+     "image_id": "tone-cand-02"
+    }
+   ],
+   "member_count": 0,
+   "lib_mix": {},
+   "suitable": [
+    "建议用途：高级感硬照、留白构图、样片向",
+    "派生自 tone-cand-02（暖调、高反差、中等饱和；高光通透占比高；…）"
+   ],
+   "confidence": null,
+   "montage": "tone-profiles\\candidates\\tone-cand-08-ref.jpg",
+   "status": "pending",
+   "generated_by": "tone_variant.py（路线B：母版+确定性调色派生）",
+   "reviewed_by": null,
+   "note": "派生候选必须用自带 swatch 作影调参考图出图验证，不能只靠文字描述",
+   "derived_from": "tone-cand-02",
+   "variant_name": "暖调高级灰",
+   "grade": {
+    "r_gain": 0.98,
+    "b_gain": 1.03,
+    "contrast": 0.95,
+    "saturation": 0.55,
+    "lift": 6
+   },
+   "swatch": "tone-profiles\\candidates\\tone-cand-08-ref.jpg"
+  },
+  {
+   "group_id": "tone-cand-09",
+   "description": "金黄暖调、低反差、低饱和；胶片褪色感，暗部轻抬，高光奶油",
+   "centroid": {
+    "warm_cool": 0.1279,
+    "saturation": 0.1736,
+    "contrast": 42.2195,
+    "highlight_pct": 0.0,
+    "shadow_pct": 0.0151,
+    "black_point": 38.843,
+    "skin_warm_rel": 0.0467
+   },
+   "representative": [
+    {
+     "lib": "tone-profiles",
+     "image_id": "tone-cand-09-ref",
+     "thumb": "tone-profiles\\candidates\\tone-cand-09-ref.jpg",
+     "repo": "local"
+    }
+   ],
+   "source_ids": [
+    {
+     "lib": "derived",
+     "image_id": "tone-cand-06"
+    }
+   ],
+   "member_count": 0,
+   "lib_mix": {},
+   "suitable": [
+    "建议用途：胶片风旅拍、日落草地、复古叙事",
+    "派生自 tone-cand-06（暖调（偏金黄暖意）、中等反差、饱和浓郁；…）"
+   ],
+   "confidence": null,
+   "montage": "tone-profiles\\candidates\\tone-cand-09-ref.jpg",
+   "status": "pending",
+   "generated_by": "tone_variant.py（路线B：母版+确定性调色派生）",
+   "reviewed_by": null,
+   "note": "派生候选必须用自带 swatch 作影调参考图出图验证，不能只靠文字描述",
+   "derived_from": "tone-cand-06",
+   "variant_name": "金黄胶片低饱和",
+   "grade": {
+    "r_gain": 1.03,
+    "b_gain": 0.96,
+    "contrast": 0.82,
+    "saturation": 0.5,
+    "lift": 14
+   },
+   "swatch": "tone-profiles\\candidates\\tone-cand-09-ref.jpg"
+  },
+  {
+   "group_id": "tone-cand-10",
+   "description": "冷调（蓝青倾向）、低反差、中等饱和；冷而不硬，暗部干净有空气感",
+   "centroid": {
+    "warm_cool": -0.2272,
+    "saturation": 0.2583,
+    "contrast": 40.5171,
+    "highlight_pct": 0.0,
+    "shadow_pct": 0.0,
+    "black_point": 72.84,
+    "skin_warm_rel": 0.0
+   },
+   "representative": [
+    {
+     "lib": "tone-profiles",
+     "image_id": "tone-cand-10-ref",
+     "thumb": "tone-profiles\\candidates\\tone-cand-10-ref.jpg",
+     "repo": "local"
+    }
+   ],
+   "source_ids": [
+    {
+     "lib": "derived",
+     "image_id": "tone-cand-04"
+    }
+   ],
+   "member_count": 0,
+   "lib_mix": {},
+   "suitable": [
+    "建议用途：雪山/海边/阴天冷场景、清冷治愈帧",
+    "派生自 tone-cand-04（冷调（蓝青倾向）、中等反差、饱和浓郁；肤…）"
+   ],
+   "confidence": null,
+   "montage": "tone-profiles\\candidates\\tone-cand-10-ref.jpg",
+   "status": "pending",
+   "generated_by": "tone_variant.py（路线B：母版+确定性调色派生）",
+   "reviewed_by": null,
+   "note": "派生候选必须用自带 swatch 作影调参考图出图验证，不能只靠文字描述",
+   "derived_from": "tone-cand-04",
+   "variant_name": "冷调柔光",
+   "grade": {
+    "r_gain": 0.96,
+    "b_gain": 1.05,
+    "contrast": 0.7,
+    "saturation": 0.88,
+    "lift": 12
+   },
+   "swatch": "tone-profiles\\candidates\\tone-cand-10-ref.jpg"
+  },
+  {
+   "group_id": "tone-cand-11",
+   "description": "冷调青灰（雪山系）、高反差、中等饱和；暗部占比大、黑位扎实；肤色相对环境明显偏暖（青灰环境衬暖肤色）",
+   "centroid": {
+    "warm_cool": -0.2728,
+    "saturation": 0.2722,
+    "contrast": 56.2261,
+    "highlight_pct": 0.0016,
+    "shadow_pct": 0.2419,
+    "black_point": 14.2958,
+    "skin_warm_rel": 0.1492
+   },
+   "representative": [
+    {
+     "lib": "tone-profiles",
+     "image_id": "tone-cand-11-ref",
+     "thumb": "tone-profiles\\candidates\tone-cand-11-ref.jpg",
+     "repo": "local"
+    }
+   ],
+   "source_ids": [
+    {
+     "lib": "user-clip",
+     "image_id": "T01_张力_他乘马人立回头"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "H06_骑乘_马上俯身她踮脚接手"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "A05_雪脊小人_对向走近"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "B04_过肩_她搭披肩到他肩"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "A18_雪脊小人_她牵黑马走"
+    }
+   ],
+   "member_count": 5,
+   "lib_mix": {},
+   "suitable": [
+    "雪山/冰川/冬季雪原",
+    "青灰冷调环境人像",
+    "黑马白马马场题材"
+   ],
+   "confidence": null,
+   "montage": "tone-profiles\\candidates\tone-cand-11-ref.jpg",
+   "status": "approved",
+   "generated_by": "用户成片组提取（5张一致性检验通过后取均值）",
+   "reviewed_by": "用户",
+   "note": "swatch 取自 H06 骑乘俯身（环境+人物均衡帧）；来源为剪贴板临时文件，已固化 swatch 至 candidates/",
+   "derived_from": null,
+   "variant_name": "雪山青灰冷调",
+   "swatch": "tone-profiles\\candidates\tone-cand-11-ref.jpg",
+   "reviewed_at": "2026-11-12",
+   "review_note": "用户指定为 lake-blue-01 主影调"
+  },
+  {
+   "group_id": "tone-cand-12",
+   "description": "西部电影低调暖调：暖棕主体+深暗背景，暗部占比过半、高光极少，中等反差、饱和浓郁，黑位扎实，肤色暖润为画面暖点",
+   "centroid": {
+    "warm_cool": 0.1208,
+    "saturation": 0.3867,
+    "contrast": 45.8682,
+    "highlight_pct": 0.0059,
+    "shadow_pct": 0.5589,
+    "black_point": 0.924,
+    "skin_warm_rel": 0.3049
+   },
+   "representative": [
+    {
+     "lib": "tone-profiles",
+     "image_id": "tone-cand-12-ref",
+     "thumb": "tone-profiles\\candidates\tone-cand-12-ref.jpg",
+     "repo": "local"
+    }
+   ],
+   "source_ids": [
+    {
+     "lib": "user-clip",
+     "image_id": "微信图片_184_2黑马牛仔帽"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "微信图片_185_2金鹰"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "微信图片_190_2骑马疾驰"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "微信图片_186_2白纱黑马夜景"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "微信图片_187_2"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "点烟特写"
+    }
+   ],
+   "member_count": 6,
+   "lib_mix": {},
+   "suitable": [
+    "西部/荒漠/马场题材",
+    "夜景暗场人像",
+    "低调电影感环境人像"
+   ],
+   "confidence": null,
+   "montage": "tone-profiles\\candidates\tone-cand-12-ref.jpg",
+   "status": "pending",
+   "generated_by": "用户成片组提取（6张一致性检验通过后取均值）",
+   "reviewed_by": null,
+   "note": "swatch 取点烟特写（人物占比最高、无场景结构，避免场景渗漏）；来源为剪贴板临时文件，已固化至 candidates/",
+   "derived_from": null,
+   "variant_name": "西部电影低调暖调",
+   "swatch": "tone-profiles\\candidates\tone-cand-12-ref.jpg"
+  },
+  {
+   "group_id": "tone-cand-13",
+   "description": "暮色双温富饱和：冷调蓝紫环境+暖光源（日照金山/烛光）并存，高反差、饱和浓郁，暗部少而黑位扎实，白纱纯白，肤色暖润突出",
+   "centroid": {
+    "warm_cool": -0.0062,
+    "saturation": 0.3811,
+    "contrast": 65.3676,
+    "highlight_pct": 0.0148,
+    "shadow_pct": 0.1671,
+    "black_point": 7.7205,
+    "skin_warm_rel": 0.4192
+   },
+   "representative": [
+    {
+     "lib": "tone-profiles",
+     "image_id": "tone-cand-13-ref",
+     "thumb": "tone-profiles\\candidates\tone-cand-13-ref.jpg",
+     "repo": "local"
+    }
+   ],
+   "source_ids": [
+    {
+     "lib": "user-clip",
+     "image_id": "丽江_3花拱双人"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "丽江_4花拱全景"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "丽江_5拱门特写"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "丽江_7竖幅远山"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "丽江_8宣读誓言"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "丽江_10牵手起舞"
+    }
+   ],
+   "member_count": 6,
+   "lib_mix": {},
+   "suitable": [
+    "雪山目的地婚礼",
+    "暮色/蓝调时刻外景",
+    "烛光晚宴场景"
+   ],
+   "confidence": null,
+   "montage": "tone-profiles\\candidates\tone-cand-13-ref.jpg",
+   "status": "pending",
+   "generated_by": "用户成片组提取（6张一致性检验通过后取均值）",
+   "reviewed_by": null,
+   "note": "与cand-03（中性高反差）数值距离最近(5.8)，但本质区别是双温结构（组内暖度双峰±0.10：蓝紫冷天空帧-0.17 vs 金山暖帧+0.12），均值不体现；swatch 取_8宣读誓言（人物占比最高）；场景元素较多，给非婚礼图用时注意场景渗漏",
+   "derived_from": null,
+   "variant_name": "暮色双温富饱和",
+   "swatch": "tone-profiles\\candidates\tone-cand-13-ref.jpg"
+  },
+  {
+   "group_id": "tone-cand-14",
+   "description": "日光胶片强反差：全库最高反差档（82），冷调深蓝天空+墨绿环境（阴影带胶片绿倾向），肤色暖金突出形成冷暖对比，黑位扎实，白纱纯白",
+   "centroid": {
+    "warm_cool": -0.0142,
+    "saturation": 0.2973,
+    "contrast": 81.1403,
+    "highlight_pct": 0.1239,
+    "shadow_pct": 0.2768,
+    "black_point": 11.6351,
+    "skin_warm_rel": 0.2841
+   },
+   "representative": [
+    {
+     "lib": "tone-profiles",
+     "image_id": "tone-cand-14-ref",
+     "thumb": "tone-profiles\\candidates\tone-cand-14-ref.jpg",
+     "repo": "local"
+    }
+   ],
+   "source_ids": [
+    {
+     "lib": "user-clip",
+     "image_id": "白驹_再晒一晒暖阳_2"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "白驹_再晒一晒暖阳_3"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "白驹_再晒一晒暖阳_4"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "白驹_再晒一晒暖阳_5"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "白驹_再晒一晒暖阳_6"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "白驹_再晒一晒暖阳_7"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "白驹_再晒一晒暖阳_8"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "白驹_再晒一晒暖阳_9"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "白驹_再晒一晒暖阳_10"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "白驹_再晒一晒暖阳_11"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "白驹_再晒一晒暖阳_12"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "白驹_再晒一晒暖阳_13"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "白驹_再晒一晒暖阳_14"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "白驹_再晒一晒暖阳_15"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "白驹_再晒一晒暖阳_16"
+    }
+   ],
+   "member_count": 15,
+   "lib_mix": {},
+   "suitable": [
+    "高山草甸/森林外景",
+    "晴天日光硬光人像",
+    "胶片感冷暖对比环境人像"
+   ],
+   "confidence": null,
+   "montage": "tone-profiles\\candidates\tone-cand-14-ref.jpg",
+   "status": "pending",
+   "generated_by": "用户成片组提取（15张全量，一致性检验全部通过）",
+   "reviewed_by": null,
+   "note": "签名：反差81.1为全库最高（次高cand-02为73.2）；阴影绿色溢出+4~+9（胶片绿倾向，七维特征未覆盖，实测补充）；组内暖度双峰（冷环境帧-0.15 vs 逆光暖帧+0.20）；与cand-03距离11.8。swatch取_3对视特写（人物占比最高）",
+   "derived_from": null,
+   "variant_name": "日光胶片强反差",
+   "swatch": "tone-profiles\\candidates\tone-cand-14-ref.jpg"
+  },
+  {
+   "group_id": "tone-cand-15",
+   "description": "富饱和暖彩探险调：全库最高饱和档（0.50），中性偏暖、高反差，墨绿环境+蓝橙撞色服装+粉紫晚霞天空层次丰富，黑位扎实，白纱纯白，肤色暖润",
+   "centroid": {
+    "warm_cool": 0.0985,
+    "saturation": 0.5018,
+    "contrast": 59.0276,
+    "highlight_pct": 0.0149,
+    "shadow_pct": 0.2231,
+    "black_point": 6.3205,
+    "skin_warm_rel": 0.3445
+   },
+   "representative": [
+    {
+     "lib": "tone-profiles",
+     "image_id": "tone-cand-15-ref",
+     "thumb": "tone-profiles\\candidates\tone-cand-15-ref.jpg",
+     "repo": "local"
+    }
+   ],
+   "source_ids": [
+    {
+     "lib": "user-clip",
+     "image_id": "探险_8草地躺卧"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "探险_5皮艇接吻"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "探险_6皮艇比心"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "探险_7拖艇晚霞"
+    },
+    {
+     "lib": "user-clip",
+     "image_id": "探险_4头纱相拥"
+    }
+   ],
+   "member_count": 5,
+   "lib_mix": {},
+   "suitable": [
+    "户外探险/露营/皮艇题材",
+    "彩色晚霞日落场景",
+    "撞色服装活力风格"
+   ],
+   "confidence": null,
+   "montage": "tone-profiles\\candidates\tone-cand-15-ref.jpg",
+   "status": "approved",
+   "generated_by": "用户成片组提取（5张一致性检验全部通过后取均值）",
+   "reviewed_by": "用户",
+   "note": "签名：饱和0.502为全库最高档（次高cand-12为0.387）；与cand-13距离6.5最近，但饱和（0.50 vs 0.38）与暖度（+0.10 vs -0.01）差异明确——cand-13是暮色双温，本组是富饱和暖彩。swatch取_6皮艇比心（人物占比最高），注意服装蓝橙撞色可能渗入改图结果",
+   "derived_from": null,
+   "variant_name": "富饱和暖彩探险",
+   "swatch": "tone-profiles\\candidates\tone-cand-15-ref.jpg",
+   "reviewed_at": "2026-11-12T16:03:59"
+  }
+ ]
+}

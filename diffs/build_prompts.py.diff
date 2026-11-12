@@ -1,0 +1,51 @@
+--- C:\Users\12104\AppData\Local\Temp/build_prompts.orig.py	2026-11-11 17:01:15.338301500 +0800
++++ scripts/build_prompts.py	2026-11-11 16:56:44.934154100 +0800
+@@ -61,6 +61,39 @@
+ 
+ LIGHT = "【光影】<一套一个，从锁定表原文照抄；时段+太阳方位+光比+高光落点+阴影软硬>"
+ 
++# ===== 影调注入（references/23 影调库 V1 / A方案，2026-11-11）=====
++# 激活条件：SET_OUTPUT 根目录存在 tone.lock.json（开工时随锁定表一起写）。
++# 未激活时以下逻辑全部跳过，装配结果与旧版完全一致。
++# 注入落位（八段骨架不变，不加第九段）：
++#   master_tone_id → 每帧首行标签【影调:tone-xxx】（元信息，precheck 剥离，0 预算）
++#   core           → 【色彩逻辑】开头（≤60 字，用户写 SHOTS 时【色彩逻辑】留空或写占位）
++#   skin_protection→ 【人物皮肤】段尾追加
++#   negative_addon → 【负面约束】追加
++#   light_adapt    → 不在此装配：光线是逐帧属性，写 SHOTS 的【光影】时照抄锁定表的光线适配
++import json as _json
++
++def _load_tone_lock():
++    p = os.path.join(SET_OUTPUT, "tone.lock.json")
++    if not os.path.exists(p):
++        return None
++    lock = _json.load(open(p, encoding="utf-8"))
++    prof_path = os.path.join(_HERE, "..", "tone-profiles", lock["master_tone_id"] + ".json")
++    if not os.path.exists(prof_path):
++        sys.exit(f"tone.lock.json 引用的档案不存在: {prof_path}")
++    prof = _json.load(open(prof_path, encoding="utf-8"))
++    return lock, prof
++
++_tone = _load_tone_lock()
++if _tone:
++    _lock, _prof = _tone
++    _pf = _prof.get("prompt_fragments", {})
++    _tone_tag = f"【影调:{_lock['master_tone_id']}】"
++    _tone_core = _pf.get("core", "")
++    _skin_line = SKIN + _pf.get("skin_protection", "").rstrip("。") + "。"
++    _neg_line = NEG.rstrip("。") + "、" + _pf.get("negative_addon", "").rstrip("。") + "。\n"
++    print(f"[影调] 已激活 master_tone_id={_lock['master_tone_id']}（references/23）")
++else:
++    _tone_tag, _tone_core, _skin_line, _neg_line = "", "", SKIN, NEG
+ 
+ NEG = """【负面约束】不要泛白、不要灰雾、不要奶白调、不要整体泛黄、不要阴天感、不要HDR、不要塑料皮肤、不要磨皮、不要网红脸大眼瘦脸、不要贴脸大特写、不要身体被画面边缘切断、不要四肢手指变形、不要明显颗粒噪点、不要看镜头（除非人物活动里明确写了看镜头）。"""
+ 
+@@ -85,7 +118,7 @@
+     #    卡口在 precheck.py，跑 build 后务必先跑它。
+     head = "【人物参考】" + REF_COUPLE + "；" + STYLING + "。"
+     for fname, body in SHOTS:
+-        txt = head + "\n\n" + body + "\n\n" + SKIN + "\n\n" + LIGHT + "\n\n" + BODYOK + "\n\n" + NEG + "\n"
++        txt = _tone_tag + "\n" + head + "\n\n" + body + "\n\n" + _skin_line + "\n\n" + LIGHT + "\n\n" + BODYOK + "\n\n" + _neg_line + "\n"
+         with open(os.path.join(PROMPT_DIR, fname), "w", encoding="utf-8") as f:
+             f.write(txt)
+         print("wrote", fname)

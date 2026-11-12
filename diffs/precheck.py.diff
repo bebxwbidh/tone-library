@@ -1,0 +1,213 @@
+--- scripts/precheck.py.bak-20261111-pre-tone	2026-11-11 16:50:20.463111300 +0800
++++ scripts/precheck.py	2026-11-11 16:54:12.453488600 +0800
+@@ -45,7 +45,7 @@
+       查三张清单的反面：负面须同时含「不要人脸模糊」+「不要整张模糊」+「不要重影分身」
+       查旋转豁免的代价：旋转或全身景须有「裙边垂到脚踝以下」+ 负面「不要腿部裸露」
+ """
+-import argparse, os, re, sys, glob
++import argparse, json, os, re, sys, glob
+ 
+ CN_LIMIT = 250
+ REF_LIMIT = 5
+@@ -693,9 +693,162 @@
+     return RE_GENRE_TAG.sub("", txt)
+ 
+ 
++# ===== 影调一致性检查（2026-11-11 立，references/23 影调库 V1 / A方案）=====
++# 设计原则：
++#   1) 兼容旧格式——目录里没有 tone.lock.json 且所有帧都没写【影调:】标签时，
++#      影调检查整体静默跳过，旧行为零变化；
++#   2) master_tone_id 用首行元信息标签【影调:tone-XXXXXXXX-NN】声明（同【景别:XX】，
++#      组层面元信息，剥离后不计入 250 token 正文预算）；
++#   3) 套级锁定文件 tone.lock.json（放提示词目录）声明 master_tone_id + 可选签名词，
++#      帧标签与锁定文件不一致 = 未经授权的影调切换，FAIL；
++#   4) 静态检查只保证提示词层一致——成片影调必须另走 光检.py --ref + 并排目检，
++#      提示词通过 ≠ 成片通过（输出区固定提醒，不可关闭）。
++RE_TONE_TAG = re.compile(r"【影调[:：]\s*([^】\n]+)】")
++# 冷暖倾向词（按 05 号白平衡铁律 / 22 号审美基准的用词收集）。
++# 单帧内同时出现冷暖（如「冷调环境+肤色暖意」是 22 号合法写法）不算矛盾；
++# 矛盾判定在**帧与帧之间**：warm 主导帧与 cool 主导帧并存 = 冷暖漂移。
++TONE_WARM_WORDS = ["暖金", "金黄", "金色", "夕阳", "落日", "暖调", "暖棕", "暖肤", "琥珀", "黄昏暖", "暖意"]
++TONE_COOL_WORDS = ["冷调", "冷白", "蓝调", "冷蓝", "冰蓝", "青冷", "冷青", "冷色", "偏冷"]
++# 肤色改写禁词：影调档案只许描述皮肤与环境的关系，不许强制改肤（07 号：不强制美白/染色）
++SKIN_ALTER_WORDS = ["美白", "古铜", "小麦色", "蜜色", "晒黑", "增白"]
++# 肤色保护特征词：每帧【人物皮肤】段必须保留真实皮肤规则（07 号四项的落词）
++SKIN_PROTECT_WORDS = ["真实皮肤纹理", "皮肤质感", "不磨皮", "真实质感", "皮肤纹理", "自然肤色"]
++
++
++def strip_tone_tag(txt):
++    return RE_TONE_TAG.sub("", txt)
++
++
++def tone_bucket(txt):
++    """单帧冷暖主导判定。返回 'warm' / 'cool' / 'neutral'（只看【色彩逻辑】段）。"""
++    m = re.search(r"【色彩逻辑】([^\n]*)", txt)
++    seg = m.group(1) if m else ""
++    warm = sum(seg.count(w) for w in TONE_WARM_WORDS)
++    cool = sum(seg.count(w) for w in TONE_COOL_WORDS)
++    if warm > cool:
++        return "warm"
++    if cool > warm:
++        return "cool"
++    return "neutral"
++
++
++def load_tone_lock(prompt_dir):
++    """读取提示词目录下的 tone.lock.json。不存在返回 None。
++    格式：{"master_tone_id": "...", "variation_frames": ["F13"], "core_signature": "",
++           "negative_signature": "", "notes": ""}"""
++    p = os.path.join(prompt_dir, "tone.lock.json")
++    if not os.path.exists(p):
++        return None
++    try:
++        return json.loads(open(p, encoding="utf-8").read())
++    except Exception as e:
++        return {"_error": f"tone.lock.json 解析失败: {e}"}
++
++
++def check_tone_consistency(raw_pairs, prompt_dir):
++    """组层面影调一致性检查（references/23 §5）。
++    raw_pairs = [(未剥离标签的全文, 文件名), ...]。
++    返回 (issues, tone_counts)。旧格式（无 lock 且无标签）返回空。"""
++    issues = []
++    lock = load_tone_lock(prompt_dir)
++    if lock and "_error" in lock:
++        return [f"FAIL {lock['_error']}"], {}
++    tags = {}
++    for raw, fname in raw_pairs:
++        m = RE_TONE_TAG.search(raw)
++        if m:
++            tags[fname] = m.group(1).strip()
++    if not lock and not tags:
++        return [], {}   # 旧格式：整体跳过，零打扰
++    # --- T1 master_tone_id 唯一性 ---
++    master = (lock or {}).get("master_tone_id", "")
++    if not master and tags:
++        uniq = set(tags.values())
++        if len(uniq) == 1:
++            master = next(iter(uniq))
++        else:
++            issues.append(
++                "FAIL 未经授权的影调切换（T1）：帧间出现多个 master_tone_id——"
++                + "、".join(f"{f}:{t}" for f, t in sorted(tags.items()))
++                + "——一套图只能一个主影调（references/23 §3）；换影调=开新套")
++            return issues, {t: sum(1 for v in tags.values() if v == t) for t in uniq}
++    variation = set(lock.get("variation_frames", []) if lock else [])
++    # --- T2 帧标签必须齐全且等于 master ---
++    for raw, fname in raw_pairs:
++        short = fname.replace(".txt", "")
++        tag = tags.get(fname)
++        if tag is None:
++            issues.append(
++                f"FAIL {short} 缺【影调:master_tone_id】标签（T2）："
++                f"锁定文件已声明 master_tone_id={master}，每帧首行必须写【影调:{master}】"
++                f"（元信息，不计入 token 预算）")
++        elif tag != master:
++            issues.append(
++                f"FAIL {short} 影调标签 {tag} ≠ master {master}（T1 未经授权的影调切换）："
++                f"同套不许换滤镜风格；若确需时段变奏走锁定表登记制（≤2 帧），影调本身不许换")
++    # --- T3 冷暖矛盾（跨帧，排除登记变奏帧）---
++    leans = {}
++    for raw, fname in raw_pairs:
++        short = fname.replace(".txt", "")
++        if short in variation:
++            continue
++        leans[short] = tone_bucket(strip_tone_tag(raw))
++    lean_vals = {v for v in leans.values() if v != "neutral"}
++    if len(lean_vals) > 1:
++        warm_f = [k for k, v in leans.items() if v == "warm"]
++        cool_f = [k for k, v in leans.items() if v == "cool"]
++        issues.append(
++            f"FAIL 冷暖矛盾（T3）：warm 主导帧 {','.join(warm_f)} 与 cool 主导帧 {','.join(cool_f)} 并存"
++            f"——同套冷暖不许漂移（references/15 §6 影调锚 + references/05 白平衡铁律）；"
++            f"单帧内「冷环境+暖肤色」合法，帧间主导倾向不许换")
++    # --- T4 主影调核心描述落位 ---
++    sig = (lock or {}).get("core_signature", "")
++    if sig:
++        for raw, fname in raw_pairs:
++            short = fname.replace(".txt", "")
++            m = re.search(r"【色彩逻辑】([^\n]*)", raw)
++            seg = m.group(1) if m else ""
++            if sig not in seg:
++                issues.append(
++                    f"FAIL {short}【色彩逻辑】缺主影调核心描述（T4）："
++                    f"必须包含签名词「{sig}」（来自影调档案 core，references/23 §4）")
++    elif lock:
++        issues.append(
++            "WARN tone.lock.json 未填 core_signature：无法核对每帧是否带了主影调核心描述，"
++            "请在档案 prompt_fragments.core 里挑 6~12 字特征子串填入锁定文件")
++    # --- T5 肤色保护 ---
++    for raw, fname in raw_pairs:
++        short = fname.replace(".txt", "")
++        m = re.search(r"【人物皮肤】([^\n]*)", raw)
++        seg = m.group(1) if m else ""
++        if not any(w in seg for w in SKIN_PROTECT_WORDS):
++            issues.append(
++                f"FAIL {short}【人物皮肤】缺真实肤色保护词（T5）："
++                f"需含「真实皮肤纹理/皮肤质感/不磨皮」其一（references/07）——"
++                f"影调不许接管皮肤标准")
++        m2 = re.search(r"【色彩逻辑】([^\n]*)", raw)
++        seg2 = m2.group(1) if m2 else ""
++        hit = [w for w in SKIN_ALTER_WORDS if w in seg2]
++        if hit:
++            issues.append(
++                f"FAIL {short}【色彩逻辑】出现改肤词 {('/'.join(hit))}（T5）："
++                f"影调档案只能描述肤色与环境关系，不许美白/古铜/染色（references/07 B项）")
++    # --- T6 影调专属负面词 ---
++    negsig = (lock or {}).get("negative_signature", "")
++    if negsig:
++        for raw, fname in raw_pairs:
++            short = fname.replace(".txt", "")
++            neg = feet_section(strip_tone_tag(raw))
++            if negsig not in neg:
++                issues.append(
++                    f"FAIL {short}【负面约束】缺影调专属异常词（T6）："
++                    f"必须包含「{negsig}」（档案 banned_anomalies 的提示词化）")
++    return issues, {t: sum(1 for v in tags.values() if v == t) for t in set(tags.values())}
++
++
+ def load_prompt(path):
+-    """统一读取提示词并剥离景别标签。所有 check_* 走这里，保证 token 与分类口径一致。"""
+-    return strip_genre_tag(open(path, encoding="utf-8").read())
++    """统一读取提示词并剥离景别/影调标签。所有 check_* 走这里，保证 token 与分类口径一致。"""
++    return strip_tone_tag(strip_genre_tag(open(path, encoding="utf-8").read()))
+ 
+ 
+ def genre_bucket(raw):
+@@ -871,7 +1024,7 @@
+     genre_pairs = []
+     for f in files:
+         raw_orig = open(f, encoding="utf-8").read()
+-        raw = strip_genre_tag(raw_orig)   # 剥离【景别:XX】标签，保证 token 与机位分类口径一致
++        raw = strip_tone_tag(strip_genre_tag(raw_orig))   # 剥离【景别】【影调】标签，保证 token 与机位分类口径一致
+         all_txt.append(raw)
+         cam_pairs.append((raw, os.path.basename(f)))
+         genre_pairs.append((raw_orig, os.path.basename(f)))   # 景别检查需保留原始标签
+@@ -941,12 +1094,26 @@
+         for i in r_issues:
+             print(i)
+         roll_fail = any(i.startswith("FAIL") for i in r_issues)
++
++    # 影调一致性（references/23；旧格式静默跳过，不受 --no-quota 控制——它是套级纪律）
++    tone_issues, tone_counts = check_tone_consistency(genre_pairs, a.prompt_dir)
++    if tone_counts or tone_issues:
++        print(f"\n影调一致性（references/23）：master 标签分布 "
++              + ("、".join(f"{k}×{v}" for k, v in tone_counts.items()) or "无标签")
++              + (f"（锁定文件 master_tone_id 已读取）" if load_tone_lock(a.prompt_dir) else ""))
++        for i in tone_issues:
++            print(i)
++    tone_fail = any(i.startswith("FAIL") for i in tone_issues)
+     print(f"\n结果：{total_pass}/{len(files)} 通过")
+     human_ok = (a.human_refs == 2) if a.mode == "anchor" else (a.human_refs == 1)
+     if (total_fail > 0 or a.refs > REF_LIMIT or not human_ok
+-            or ratio > a.smile_max or quota_fail or genre_fail or roll_fail):
++            or ratio > a.smile_max or quota_fail or genre_fail or roll_fail or tone_fail):
+         print("⛔ 不许出图，先改提示词")
+         sys.exit(2)
++    if tone_counts or tone_issues:
++        print("ℹ️ 影调静态检查通过 ≠ 成片影调通过：出图后必须用 "
++              "光检.py --ref（相对判据）+ 同批并排目检对照影调基准帧，"
++              "色调跳档的帧判废重出（references/15 §6.3）——提示词层检查不能替代成片验收")
+ 
+ 
+ if __name__ == "__main__":

@@ -1,0 +1,32 @@
+{
+  "tone_id": "tone-20261111-90",
+  "name": "示例·低饱和冷调通透（模拟档案）",
+  "version": "1.0",
+  "created": "2026-11-11",
+  "updated": "2026-11-11",
+  "source": {
+    "type": "user_reference_photos",
+    "photos": ["（模拟条目）用户参考照片将在真实提取时登记"],
+    "note": "⚠️ 本档案是交付验收用的模拟样本：tone/prompt_fragments 字段为人工编写的示例结论，measured 为 null——不是从任何真实照片提取的。真实档案等待用户提供 1~5 张参考照片后按 references/23 §3 流程生成。"
+  },
+  "tone": {
+    "warm_cool": {"value": "偏冷", "detail": "环境整体中性偏冷，肤色保留自然暖意作唯一暖色焦点"},
+    "contrast": {"value": "中", "detail": "明暗层次完整：亮部集中在受光面，中间调过渡缓慢，暗部扎实不灰"},
+    "highlights_shadows": {"highlight": "白纱高光保留布纹不炸不泛白", "shadow": "暗部有细节不死黑不发闷", "black_point": "黑位扎实"},
+    "saturation": {"value": "低", "main_hues": ["草绿", "天蓝", "自然暖肤"]},
+    "skin_environment": "肤色不被环境绿带偏，白纱保持纯白；肤色是画面唯一暖色焦点",
+    "texture": {"grain": "无颗粒", "softness": "整体通透锐利不糊", "photographic_quality": "真人实拍、真实皮肤纹理"},
+    "suitable": ["晴天山地", "草原", "湖畔", "海岸"],
+    "unsuitable": ["夜景", "室内", "雾森晨光"],
+    "banned_anomalies": ["整体泛黄", "泛白奶白调", "灰雾低对比", "青绿偏色染肤色", "塑料皮肤", "HDR", "高饱和艳色"]
+  },
+  "prompt_fragments": {
+    "core": "低饱和冷调通透：环境冷而净，白纱纯白，肤色自然暖意是唯一暖点，暗部扎实",
+    "light_adapt_template": "{时段}{太阳方位}，光比{光比}，按本景真实光照适配曝光与暗部偏色，影调不变",
+    "skin_protection": "肤色保持人物原始自然肤色，不被环境色染色，真实皮肤纹理不磨皮",
+    "negative_addon": "不要整体泛黄、不要青绿偏色染到肤色、不要高饱和艳色"
+  },
+  "measured": null,
+  "core_signature": "低饱和冷调通透",
+  "notes": "模拟档案：仅供交付验收（模拟帧清单 + 正反例测试）使用。防伪造红线见 schema.json。"
+}

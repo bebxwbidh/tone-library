@@ -1,0 +1,17 @@
+{
+  "model": "doubao-seedream-4-0-20260415",
+  "size": "1664x2496",
+  "prompt": "【影调:tone-cand-02】\n【景别:中景】\n【人物参考】第1张为影调氛围参考：只学光线氛围，不复制人脸与服装。旅拍新人，女生白婚纱，男生深色西装；两人脸清晰五官正常，他不戴眼镜，下巴干净无胡茬。\n【摄影参数】50mm，f/2.8。\n【视觉方向】中景平视，人物占画面二分之一，前景草叶虚化，后景黄昏天空。\n【人物皮肤】真实皮肤纹理无黑点，不磨皮；肤色保持自然，暖光下呈自然暖意不被染橙。\n【色彩逻辑】暖调高反差通透：暖金逆光勾轮廓，高光透而不炸，暗部厚重不灰，白纱纯白不泛黄，肤色为画面唯一明显暖点。\n【光影】日落前低角度逆光，头纱发丝金色轮廓光，光比1:3，草地长投影。\n【人物活动】男生背后环抱女生，女生头微靠他肩；两人表情平静，不看镜头。\n【负面约束】不要多余人物、不要磨皮、不要泛白、不要灰雾、不要整体泛黄、不要琥珀滤镜罩全画面、不要眼镜、不要多手、不要AI感塑料皮肤",
+  "refs": [
+    "C://Users//12104//AppData//Local//Temp//lvpai-refs//bebxwbidh__aesthetics-library//galleries//f2//f2-DSC02780.jpg"
+  ],
+  "seconds": 31.2,
+  "files": [
+    "C://Users//12104//.workbuddy//skills//lvpai-wedding-sets//tone-profiles//verify-cand-02\\F01-cand02.jpg"
+  ],
+  "usage": {
+    "generated_images": 1,
+    "output_tokens": 16224,
+    "total_tokens": 16224
+  }
+}
